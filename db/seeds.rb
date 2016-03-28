@@ -8,6 +8,6 @@
 Product.delete_all
 
 Product.create!(title: 'Espresso', 
-  description: %w{Coffee brewed by forcing a small amount of nearly boiling water under pressure through finely ground coffee beans. Espresso is generally thicker than coffee brewed by other methods, has a higher concentration of suspended and dissolved solids, and has crema on top (a foam with a creamy consistency).}, 
+  description: %{Coffee brewed by forcing a small amount of nearly boiling water under pressure through finely ground coffee beans. Espresso is generally thicker than coffee brewed by other methods, has a higher concentration of suspended and dissolved solids, and has crema on top (a foam with a creamy consistency).}, 
   image_url: 'espresso.png',
   price: 25.00)
