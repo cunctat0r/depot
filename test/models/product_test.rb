@@ -55,4 +55,13 @@ class ProductTest < ActiveSupport::TestCase
     assert_equal [I18n.translate('errors.messages.taken')], product.errors[:title]
   end
 
+  test 'title should be at least 5 characters' do
+    product = products(:espresso)
+    product.title = 'a'*4
+    assert product.invalid?
+
+    product.title = 'a'*5
+    assert product.valid?    
+  end
+
 end
