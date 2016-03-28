@@ -5,4 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-products = Product.create(title: 'Espresso', description: 'Coffee', price: 25.00)
+Product.delete_all
+
+Product.create!(title: 'Espresso', 
+  description: %w{Coffee brewed by forcing a small amount of nearly boiling water under pressure through finely ground coffee beans. Espresso is generally thicker than coffee brewed by other methods, has a higher concentration of suspended and dissolved solids, and has crema on top (a foam with a creamy consistency).}, 
+  image_url: 'espresso.png',
+  price: 25.00)
