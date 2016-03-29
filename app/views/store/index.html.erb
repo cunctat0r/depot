@@ -3,6 +3,9 @@
 <% end %>
 
 <h1>Our best Coffee</h1>
+<% if session[:counter] > 5 %>
+	<p>Welcome again, you visit the store <%= pluralize(session[:counter], "time") %> </p>
+<% end %>
 
 <% cache ['store', Product.latest] do %>
   <% @products.each do |product| %>
